@@ -1,0 +1,52 @@
+html, body {
+	height: 100%;
+}
+body {
+	margin: 0px;
+    background: #EEE;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 13px;
+}
+#container {
+    width: 396px;
+    margin: 0 auto;
+    text-align: left;
+}
+h1 {
+	background: #EEE url("../images/oliverzheng.png") 0 120px no-repeat;
+    width: 396px;
+    height: 0;
+    padding: 203px 0 0 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#content {
+    line-height: 1.7em;
+    margin: 40px 30px 30px 30px;
+    color: #444;
+}
+#content p {
+    text-align: center;
+}
+a {
+    color: #C63;
+    text-decoration: none;
+}
+a:hover {
+    border-bottom: 1px solid #CBA;
+    color: #A63;
+}
+address {
+    border-top: 1px solid #DDD;
+    margin-top: 40px;
+    padding-top: 15px;
+    color: #999;
+    line-height: 1.4em;
+}
+#phone {
+    float: right;
+}
+.center {
+    text-align: center;
+}
