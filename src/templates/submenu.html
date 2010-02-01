@@ -1,0 +1,32 @@
+<#
+from os.path import dirname
+templatedir = dirname(indextree['source_file']) + '/templates/'
+#>
+<% include(templatedir + '/header.html') %>
+
+<ul>
+<#
+    from os.path import basename, dirname
+    for page in indextree['pages']:
+        if basename(dirname(page['source_file'])) in thispage['current_dir']:
+            main_section = page
+            break
+
+    menu = []
+    menu.append((main_section['target'],
+                 main_section['link-title'],
+                 thispage['target'] == main_section['target']))
+
+    for page in main_section['pages']:
+        current_cat = basename(dirname(page['source_file'])) in thispage['current_dir']
+        menu.append((page['target'], page['link-title'], current_cat))
+
+    for target, name, current in menu:
+        print '<li%s><a href="%s">%s</a></li>' % \
+              (current and ' class="current"' or '', target, name)
+#>
+</ul>
+
+<% body %>
+
+<% include(templatedir + '/footer.html') %>

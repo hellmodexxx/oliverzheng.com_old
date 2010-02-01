@@ -1,0 +1,80 @@
+restindex
+    template: ../templates/basic.html
+    initialheaderlevel: 2
+
+    page-title: Application-based TCP Hijacking
+    page-description:
+        Hijacking established TCP connections and injecting application-level
+        commands with the interplay of network- and application-level protocols.
+    /description
+/restindex
+
+ABTH was a research project completed in an undergraduate course of
+`Introduction to Computer Security`__ in the fall of 2007, and later perfected
+and `published as a conference paper`__ in `EuroSec 2009`__. The coauthors
+`Jason Poon`_ and `Dr. Konstantin Beznosov`_ both threw in magic of their own as
+well.
+
+.. _Jason Poon: http://jasonpoon.ca/
+.. _Dr. Konstantin Beznosov: http://konstantin.beznosov.net/professional/index.html
+
+__ http://courses.ece.ubc.ca/412/
+__ http://portal.acm.org/citation.cfm?id=1519146
+__ http://www.ics.forth.gr/dcs/eurosec09/
+
+The `paper is hosted here`__ as well, if you, like me, do not have an ACM
+subscription. I would like to take a moment to say fuck you to ACM for owning
+the copyright of distribution to a paper I wrote, and not allowing me to access
+it without a subscription. So much for the proliferation of public knowledge and
+advancement. What a bunch of crooks.
+
+__ ../files/abth.pdf
+
+Technical
+---------
+
+Traditional TCP hijacking fails as a viable attack due to a lack of exit
+strategy. Once a spoof message is injected into the network stream, sequence
+numbers and ack numbers on both sides of the connection become out of sync, and
+any further legitimate communication results in disconnection. The user usually
+notices such a problem. (If not, it is usually logged.)
+
+Certain application protocols have a *NOP* message that does not change the
+state of the application on either host and only exists to serve as some kind of
+ping mechanism. For ABTH, the protocol needs to have bi-directional pings of
+asymmetric length. An attacker can inject these pings into the TCP stream, and
+bump up sequence and ack numbers on both sides, at different rates. If
+algebraically calculated correctly, the difference created in the sequence and
+ack numbers can be perfectly the size of the malicious message, in that after
+the malicious message is sent, the TCP stream becomes synchronized again. This
+exit strategy is undetectable certainly at the application-level, and would only
+be detectable at the network stack level if some traffic modelling was in place.
+
+`Microsoft Notification Protocol`_, used in `Windows Live Messenger`_, has these
+bi-directional pings. We exploited this *feature* in MSNP and created a tool to
+send WLM instant messages to any online user (victim) by impersonating anybody
+the attacker so chooses. This makes it a precise and targeted attack, although
+it could be directed towards any random individual. Preliminary feasibility
+tests show that 95% of the time, our implementation of the attack would succeed;
+the requirement for success is that no network traffic can occur on the TCP
+stream of the victim during its execution.
+
+Read the paper for details.
+
+.. _Microsoft Notification Protocol:
+   http://en.wikipedia.org/wiki/Microsoft_Notification_Protocol
+
+.. _Windows Live Messenger: http://download.live.com/?sku=messenger
+
+Implementation
+--------------
+
+Two versions of ABTH for MSNP were implemented. The first is a prototype script
+that finished the attack in about 20 seconds, most of the times; the second is
+a C++ version that finished the attack in a little less than 2 seconds, always.
+Both should be functionally equivalent.
+
+The `ABTH source`_ is in a Git repository, along with a stub MSNP mixer
+server and the LaTeX source of the paper.
+
+.. _ABTH source: http://github.com/MTsoul/abth

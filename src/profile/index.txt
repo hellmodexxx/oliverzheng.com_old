@@ -1,0 +1,19 @@
+restindex
+    template: ../templates/submenu.html
+    page-title: Profile
+    section-pages: , contact
+/restindex
+
+I am an undergraduate student in the department of `Computer Engineering`_ in
+the `University of British Columbia`_. This is located in Vancouver, British
+Columbia of Canada, mountains and pretty Asian girls galore.
+
+I enjoy learning new things and figuring out how they work, technical or just
+generally in the world. Perhaps the only things I like more than that is thrill
+from uncertainty, and, ironically, pondering upon unproductively and repeatedly
+the unfathomable inquiry as to whether uncertainty carries any meaning at all or
+if the conceivable world we perceive is a predetermined illusion that raises
+the question that matters most - do we exist at all?
+
+.. _Computer Engineering: http://ece.ubc.ca/
+.. _University of British Columbia: http://ubc.ca/

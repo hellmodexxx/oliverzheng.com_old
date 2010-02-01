@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title><#
+    if indextree['target'] != thispage['target']:
+        print '%s - ' % thispage['link-title']
+    print site_title_suffix #></title>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=<% final_encoding %>" />
+</head>
+
+<body>
+
+    <h2><a href="<% indextree['target'] %>">Oliver Zheng</a></h2>
+
+    <ul>
+    <#
+        menu = []
+        menu.append((indextree['target'],
+                     indextree['link-title'],
+                     thispage['target'] == indextree['target']))
+
+        from os.path import basename
+        for page in indextree['pages']:
+            current_cat = basename(dirname(page['source_file'])) in thispage['current_dir']
+            menu.append((page['target'], page['link-title'], current_cat))
+
+        for target, name, current in menu:
+            print '<li%s><a href="%s">%s</a></li>' % \
+                  (current and ' class="current"' or '', target, name)
+    #>
+    </ul>
+
+    <h1><% title %></h1>

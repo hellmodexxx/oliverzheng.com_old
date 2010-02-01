@@ -1,0 +1,24 @@
+<#
+from os.path import dirname
+templatedir = dirname(indextree['source_file']) + '/templates/'
+#>
+<% include(templatedir + '/header.html') %>
+
+<% body %>
+
+<#
+
+if default_section['pages']:
+    print '<dl>'
+
+    for page in default_section['pages']:
+        print '<dt><a href="%s">%s</a></dt>' % \
+              (page['target'], page['link-title'])
+
+        print '<dd>%s</dd>' % page['page-description']
+
+    print '</dl>'
+
+#>
+
+<% include(templatedir + '/footer.html') %>

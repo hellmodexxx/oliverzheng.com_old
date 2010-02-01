@@ -1,5 +1,9 @@
 restindex
-    page-title: Oliver Zheng
+    output-encoding: utf8
+    template: templates/basic.html
+
+    page-title: Home
+    section-pages: , projects/index, rambling/index, hobbies/index, profile/index
 /restindex
 
 Some things change and some things don't.

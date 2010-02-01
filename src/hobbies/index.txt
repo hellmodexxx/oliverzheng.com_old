@@ -1,0 +1,3 @@
+restindex
+    page-title: Hobbies
+/restindex

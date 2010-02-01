@@ -1,0 +1,9 @@
+restindex
+    template: ../templates/list.html
+
+    page-title: Projects
+    section-pages: , abth
+/restindex
+
+Here are projects with technical merit more than just experimentation or
+erudition, although almost all of them were conceived as such.
