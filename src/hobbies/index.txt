@@ -1,3 +1,8 @@
 restindex
     page-title: Hobbies
 /restindex
+
+Hobbies
+=======
+
+Nothing to here. Move along.

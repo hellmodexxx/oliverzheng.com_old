@@ -1,3 +1,6 @@
 restindex
     page-title: Rambling
 /restindex
+
+Rambling
+========

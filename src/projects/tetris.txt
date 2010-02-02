@@ -1,12 +1,14 @@
 restindex
     template: ../templates/basic.html
-    initialheaderlevel: 2
 
     page-title: Tetris
     page-description:
         DirectX-based Windows Tetris game.
     /description
 /restindex
+
+Tetris
+======
 
 This was nothing more than a mere programming exercise, and fun nonetheless.
 Written in C++ in 2006 and used Direct3D 8, the SDK of which is not even

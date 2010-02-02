@@ -4,6 +4,9 @@ restindex
     section-pages: , contact
 /restindex
 
+Profile
+=======
+
 I am an undergraduate student in the department of `Computer Engineering`_ in
 the `University of British Columbia`_. This is located in Vancouver, British
 Columbia of Canada, mountains and pretty Asian girls galore.

@@ -5,5 +5,8 @@ restindex
     section-pages: , abth, tetris
 /restindex
 
+Projects
+========
+
 Here are projects with technical merit more than just experimentation or
 erudition, although almost all of them were conceived as such.
