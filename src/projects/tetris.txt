@@ -1,0 +1,30 @@
+restindex
+    template: ../templates/basic.html
+    initialheaderlevel: 2
+
+    page-title: Tetris
+    page-description:
+        DirectX-based Windows Tetris game.
+    /description
+/restindex
+
+This was nothing more than a mere programming exercise, and fun nonetheless.
+Written in C++ in 2006 and used Direct3D 8, the SDK of which is not even
+distributed by Microsoft anymore. Good luck compiling this.
+
+.. figure:: ../files/tetris_screenshot.png
+   :alt: Screenshot of Tetris
+   :align: center
+
+   Screenshot of Tetris running in Wine. Where is your OpenGL God now?
+
+The `compiled Tetris game`_ works on a variety of Windows environments and, cool
+enough, without any modification or foresight, in Wine on Linux. Feel free to
+try it out and see how terribly unoptimized it is, if you trust a stranger on
+the Internet enough to to run an executable on your computer.
+
+The `source code`_ is also publicly released under the BSD license... like
+anybody is going to use this code in any project.
+
+.. _compiled Tetris game: ../files/tetris.exe
+.. _source code: http://github.com/MTsoul/tetris
