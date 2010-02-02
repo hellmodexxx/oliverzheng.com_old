@@ -1,6 +1,8 @@
 restindex
     template: ../templates/basic.html
 
+    section: experiments
+
     page-title: Tetris
     page-description:
         DirectX-based Windows Tetris game.

@@ -8,17 +8,22 @@ templatedir = dirname(indextree['source_file']) + '/templates/'
 
 <#
 
-if default_section['pages']:
+for section, (section_title, section_desc) in thispage['sections'].iteritems():
+    if section:
+        section_title, section_desc = thispage['sections'][section]
+        print '<h2>%s</h2>' % section_title
+        if section_desc:
+            print '<p>%s</p>' % section_desc
+
     print '<dl>'
 
-    for page in default_section['pages']:
-        print '<dt><a href="%s">%s</a></dt>' % \
-              (page['target'], page['link-title'])
-
-        print '<dd>%s</dd>' % page['page-description']
+    for page in thispage['pages']:
+        if page['section'] == section:
+            print '<dt><a href="%s">%s</a></dt>' % \
+                  (page['target'], page['link-title'])
+            print '<dd>%s</dd>' % page['page-description']
 
     print '</dl>'
-
 #>
 
 <% include(templatedir + '/footer.html') %>

@@ -2,7 +2,14 @@ restindex
     template: ../templates/list.html
 
     page-title: Projects
-    section-pages: , abth, tetris
+
+    sectionlist: , experiments
+
+    section-pages: , abth
+
+    section-title: experiments, Experiments
+    section-pages: experiments, tetris
+
 /restindex
 
 Projects
