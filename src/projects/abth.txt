@@ -31,7 +31,7 @@ the copyright of distribution to a paper I wrote, and not allowing me to access
 it without a subscription. So much for the proliferation of public knowledge and
 advancement. What a bunch of crooks.
 
-__ ../files/abth.pdf
+__ ../files/projects/abth/abth.pdf
 
 Technical Overview
 ------------------
