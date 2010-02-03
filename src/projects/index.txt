@@ -3,12 +3,15 @@ restindex
 
     page-title: Projects
 
-    sectionlist: , experiments
+    sectionlist: , experiments, websites
 
     section-pages: , abth
 
     section-title: experiments, Experiments
     section-pages: experiments, tetris
+
+    section-title: websites, Websites
+    section-pages: websites, mtsix2006, mtsix2004
 
 /restindex
 

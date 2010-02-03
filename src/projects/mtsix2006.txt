@@ -1,0 +1,13 @@
+restindex
+    template: ../templates/basic.html
+
+    section: websites
+    build: no
+    target: http://mtsix.com/
+
+    page-title: MTsix 2006
+    page-description:
+        Revamp of that personal website that never gets old. My ego wanted
+        something new.
+    /description
+/restindex

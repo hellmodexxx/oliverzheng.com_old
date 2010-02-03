@@ -1,0 +1,13 @@
+restindex
+    template: ../templates/basic.html
+
+    section: websites
+    build: no
+    target: http://mtsix.com/
+
+    page-title: MTsix 2004
+    page-description:
+        Personal website for my inner child. Blog, portfolio, and all that
+        shtick.
+    /description
+/restindex
