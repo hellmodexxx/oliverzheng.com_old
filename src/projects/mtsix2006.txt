@@ -3,7 +3,7 @@ restindex
 
     section: websites
     build: no
-    target: http://mtsix.com/
+    target: http://mtsix.oliverzheng.com/
 
     page-title: MTsix 2006
     page-description:
