@@ -1,0 +1,13 @@
+restindex
+    section: clients
+    build: no
+    target: None
+
+    page-title: Jeff Vreeland
+    page-description:
+
+        WordPress theme for `Politics in Alabama
+        <../files/clients/politicsinalabama/>`_.
+
+    /description
+/restindex

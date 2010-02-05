@@ -3,7 +3,7 @@ restindex
 
     page-title: Projects
 
-    sectionlist: , experiments, websites
+    sectionlist: , experiments, websites, clients
 
     section-pages: , abth
 
@@ -12,6 +12,14 @@ restindex
 
     section-title: websites, Websites
     section-pages: websites, mtsix2006, mtsix2004
+
+    section-title: clients, Client Work
+    section-pages: clients, dicemedia, kevin, transition, jeffvreeland, scottberks, caphill
+    section-description: clients
+
+        Work done for client companies and individuals. The title is the client.
+
+    /description
 
 /restindex
 

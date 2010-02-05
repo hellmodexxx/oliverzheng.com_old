@@ -1,0 +1,24 @@
+restindex
+    section: clients
+    build: no
+    target: http://www.dicemedia.com/
+
+    page-title: Dice Media
+    page-description:
+
+        .. role:: note(emphasis)
+
+        All work involved constructing HTML and CSS for Photoshop layouts.
+        Links with :note:`*` are open directories that contain a list of pages.
+
+        - `Apline Group Inc. <../files/clients/alpine/>`_ :note:`*`
+        - `Stephen J. Cannell <../files/clients/cannel/>`_ :note:`*`
+        - `D.L. Murphy <../files/clients/dlm/>`_
+        - `JZSW <../files/clients/jzsw/>`_
+        - `Life's What You Make It <../files/clients/lifeswhatyoumakeit/>`_
+        - `P&V Enterprises <../files/clients/pv/>`_ :note:`*`
+        - `Shop, Love Me <../files/clients/shoploveme/>`_
+        - `Skin Apparel <../files/clients/skin/>`_ :note:`*`
+
+    /description
+/restindex

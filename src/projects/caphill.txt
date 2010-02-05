@@ -1,0 +1,12 @@
+restindex
+    section: clients
+    build: no
+    target: None
+
+    page-title: Capitol Hill Elementary School
+    page-description:
+
+        `Flash animation <../files/clients/xmas/>`_ for Christmas.
+
+    /description
+/restindex

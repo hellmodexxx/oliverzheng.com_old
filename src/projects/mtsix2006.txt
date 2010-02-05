@@ -1,6 +1,4 @@
 restindex
-    template: ../templates/basic.html
-
     section: websites
     build: no
     target: http://mtsix.oliverzheng.com/

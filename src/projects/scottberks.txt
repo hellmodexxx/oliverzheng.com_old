@@ -1,0 +1,12 @@
+restindex
+    section: clients
+    build: no
+    target: http://scottberks.com/
+
+    page-title: Scott Berks
+    page-description:
+
+        `Flash animation-based dancer game <../files/clients/dancer/>`_.
+
+    /description
+/restindex

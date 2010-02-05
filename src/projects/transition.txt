@@ -1,0 +1,13 @@
+restindex
+    section: clients
+    build: no
+    target: http://www.vsb.bc.ca/programs/university-transition-program
+
+    page-title: Transition Program
+    page-description:
+
+        `Vancouver Italy <../files/clients/vancouveritaly/>`_ HTML/CSS
+        composition.
+
+    /description
+/restindex

@@ -1,0 +1,15 @@
+restindex
+    section: clients
+    build: no
+    target: None
+
+    page-title: Kevin Collignon
+    page-description:
+
+        HTML and CSS from Photoshop layouts. 
+
+        - `2FastAudio <../files/clients/2fastaudio/>`_
+        - `Kevin Collignon <../files/clients/kevincollignon/>`_
+
+    /description
+/restindex
