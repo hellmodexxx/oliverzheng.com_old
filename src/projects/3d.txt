@@ -1,0 +1,18 @@
+restindex
+    section: experiments
+    build: no
+    target: None
+
+    page-title: 3D Modeling
+    page-description:
+
+        Done in Swift 3D:
+        
+        - `Pearl of Orient <../files/clients/3d/pearloforient.png>`_
+        - `Some 3D head <../files/clients/3d/head.jpg>`_
+        - `Blade's blade <../files/clients/3d/blade.jpg>`_ (from `Blade II
+          <http://www.imdb.com/title/tt0187738/>`_)
+        - `Go board <../files/clients/3d/go.png>`_
+
+    /description
+/restindex

@@ -6,7 +6,8 @@ restindex
     page-title: Capitol Hill Elementary School
     page-description:
 
-        `Flash animation <../files/clients/xmas/>`_ for Christmas.
+        `Flash animation <../files/clients/xmas/>`_ for Christmas, which
+        incorporated `the logo <../files/clients/capitolhilllogo>`_ as well.
 
     /description
 /restindex

@@ -1,0 +1,12 @@
+restindex
+    section: experiments
+    build: no
+    target: ../files/clients/ootb/
+
+    page-title: Out of the Box
+    page-description:
+
+        Flash layout for a grade 7 class. :)
+
+    /description
+/restindex

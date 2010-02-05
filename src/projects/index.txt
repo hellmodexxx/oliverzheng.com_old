@@ -8,7 +8,7 @@ restindex
     section-pages: , abth
 
     section-title: experiments, Experiments
-    section-pages: experiments, tetris
+    section-pages: experiments, tetris, ootb, 3d
 
     section-title: websites, Websites
     section-pages: websites, mtsix2006, mtsix2004
@@ -18,6 +18,8 @@ restindex
     section-description: clients
 
         Work done for client companies and individuals. The title is the client.
+        Most of these were done in during high school, if you were wondering
+        about the quality of the work.
 
     /description
 

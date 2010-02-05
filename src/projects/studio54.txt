@@ -6,7 +6,8 @@ restindex
     page-title: Studio 54 Design
     page-description:
 
-        `PHP/MySQL based online bookstore <http://bookstore.oliverzheng.com/>`_.
+        - `PHP/MySQL based online bookstore <http://bookstore.oliverzheng.com/>`_
+        - `Flash based layout <../files/clients/lusardi/>`_
 
     /description
 /restindex
