@@ -1,0 +1,12 @@
+restindex
+    section: clients
+    build: no
+    target: None
+
+    page-title: Studio 54 Design
+    page-description:
+
+        `PHP/MySQL based online bookstore <http://bookstore.oliverzheng.com/>`_.
+
+    /description
+/restindex

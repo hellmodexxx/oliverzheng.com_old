@@ -14,7 +14,7 @@ restindex
     section-pages: websites, mtsix2006, mtsix2004
 
     section-title: clients, Client Work
-    section-pages: clients, dicemedia, kevin, transition, jeffvreeland, scottberks, caphill
+    section-pages: clients, dicemedia, kevin, transition, jeffvreeland, studio54, scottberks, caphill
     section-description: clients
 
         Work done for client companies and individuals. The title is the client.
