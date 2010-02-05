@@ -1,9 +1,9 @@
 DEST := ~/domains/oliverzheng.com/
 
-html: assets src update
-	mkdir -p build
+html: assets src
+	mkdir -p build/files
 	cp -r assets build/_assets
-	cp -r files build/files
+	cp -r files/* build/files/
 	r2w.py conf.ini
 
 update:
