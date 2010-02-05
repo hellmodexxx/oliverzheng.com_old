@@ -19,9 +19,13 @@ for section, (section_title, section_desc) in thispage['sections'].iteritems():
 
     for page in thispage['pages']:
         if page['section'] == section:
-            print '<dt><a href="%s">%s</a></dt>' % \
-                  (page['target'].replace('http:/', 'http://'), # r2w bug
-                   page['link-title'])
+            # Hack, cause r2w doesn't expose the build attribute
+            if page['target'] == 'None':
+                print '<dt>%s</dt>' % page['link-title']
+            else:
+                print '<dt><a href="%s">%s</a></dt>' % \
+                      (page['target'].replace('http:/', 'http://'), # r2w bug
+                       page['link-title'])
             print '<dd>%s</dd>' % page['page-description']
 
     print '</dl>'
