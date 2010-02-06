@@ -1,0 +1,41 @@
+<#
+from os.path import dirname
+templatedir = dirname(indextree['source_file']) + '/templates/'
+print include(templatedir + '/header.html')
+#>
+
+<% body %>
+
+<#
+
+# Build dates
+dates = {}
+for page in thispage['pages']:
+    year = int(page['uservalues']['year'])
+    month = int(page['uservalues']['month'])
+    day = int(page['uservalues']['day'])
+    dates.setdefault(year, {})
+    dates[year].setdefault(month, {})
+    dates[year][month].setdefault(day, [])
+    dates[year][month][day].append(page)
+
+from datetime import date
+for year, months in sorted(dates.iteritems(), reverse=True):
+    print '<h2>%d</h2>' % year
+    for month, days in sorted(months.iteritems(), reverse=True):
+        d = date(year, month, 1)
+        print '<h2>%s</h2>' % d.strftime('%B')
+        for day, pages in sorted(days.iteritems(), reverse=True):
+            print '<h3>%d</h3>' % day
+            if pages:
+                print '<dl>'
+                for page in pages:
+                    print '<dt><a href="%s">%s</a></dt>' % \
+                          (page['target'].replace('index.html', ''),
+                           page['link-title'])
+                    if page['page-description']:
+                        print '<dd>%s</dd>' % page['page-description']
+                print '</dl>'
+#>
+
+<% include(templatedir + '/footer.html') %>
