@@ -23,7 +23,9 @@ templatedir = dirname(indextree['source_file']) + '/templates/'
 
     for target, name, current in menu:
         print '<li%s><a href="%s">%s</a></li>' % \
-              (current and ' class="current"' or '', target, name)
+              (current and ' class="current"' or '',
+               target.replace('index.html',''),
+               name)
 #>
 </ul>
 
