@@ -1,0 +1,12 @@
+restindex
+    section: experiments
+    build: no
+    target: ../files/projects/htmlcsslayout/
+
+    page-title: HTML/CSS Layout
+    page-description:
+
+        First attempt at HTML/CSS layout without Photoshop. Epic fail.
+
+    /description
+/restindex

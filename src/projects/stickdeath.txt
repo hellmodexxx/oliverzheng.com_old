@@ -1,0 +1,13 @@
+restindex
+    section: experiments
+    build: no
+    target: ../files/projects/stickdeath/
+
+    page-title: Stick Death Flash Game
+    page-description:
+
+        First attempt at a Flash game, animation stolen from `Xiao Xiao
+        <http://www.newgrounds.com/collection/xiaoxiao.html>`_.
+
+    /description
+/restindex

@@ -1,0 +1,13 @@
+restindex
+    section: experiments
+    build: no
+    target: ../files/projects/motioncache/
+
+    page-title: Motion Cache
+    page-description:
+
+        Smooth Flash intro and layout inspired from `2Advanced V3
+        <http://v3.2a-archive.com/>`_.
+
+    /description
+/restindex

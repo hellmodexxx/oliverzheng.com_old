@@ -8,7 +8,7 @@ restindex
     section-pages: , abth
 
     section-title: experiments, Experiments
-    section-pages: experiments, tetris, ootb, 3d
+    section-pages: experiments, tetris, 3d, motioncache, motioncachehtml, ootb, stickdeath, htmlcsslayout
 
     section-title: websites, Websites
     section-pages: websites, mtsix2006, mtsix2004
