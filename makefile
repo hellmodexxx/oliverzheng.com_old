@@ -5,7 +5,10 @@ html: assets src files conf.ini tidyconfig.txt
 	cp -r assets build/_assets
 	cp -r files/* build/files/
 	r2w.py conf.ini
-	tidy -config tidyconfig.txt -m `find build -name '*.html' ! -path '*files/*'`
+	tidy -quiet \
+         -config tidyconfig.txt \
+         -m `find build -name '*.html' ! -path '*files/*'` \
+        || test 0
 
 update:
 	git submodule init
