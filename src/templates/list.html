@@ -13,7 +13,7 @@ for section, (section_title, section_desc) in thispage['sections'].iteritems():
         section_title, section_desc = thispage['sections'][section]
         print '<h2>%s</h2>' % section_title
         if section_desc:
-            print '<p>%s</p>' % section_desc
+            print '%s' % section_desc
 
     print '<dl>'
 
