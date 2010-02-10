@@ -4,7 +4,7 @@ html: assets src files conf.ini tidyconfig.txt
 	mkdir -p build/files
 	cp -r assets build/_assets
 	cp -r files/* build/files/
-	r2w.py conf.ini
+	bash -c "export PYTHONPATH=src/templates/; r2w.py conf.ini"
 	tidy -quiet \
          -config tidyconfig.txt \
          -m `find build -name '*.html' ! -path '*files/*'` \

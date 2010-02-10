@@ -21,10 +21,11 @@ print include(templatedir + '/header.html')
         current_cat = basename(dirname(page['source_file'])) in thispage['current_dir']
         menu.append((page['target'], page['link-title'], current_cat))
 
+    from util import url
     for target, name, current in menu:
         print '<li%s><a href="%s">%s</a></li>' % \
               (current and ' class="current"' or '',
-               target.replace('index.html',''),
+               url(target),
                name)
 #>
 </ul>

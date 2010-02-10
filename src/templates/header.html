@@ -11,10 +11,15 @@
 
 <body>
 
-    <h2><a href="<% indextree['target'].replace('index.html','') %>">Oliver Zheng</a></h2>
+    <h2><a href="<#
+        from __future__ import print_function
+        from util import url
+        print(url(indextree['target']), end='')
+    #>">Oliver Zheng</a></h2>
 
     <ul>
     <#
+        from util import url
         menu = []
         menu.append((indextree['target'],
                      indextree['link-title'],
@@ -28,7 +33,7 @@
         for target, name, current in menu:
             print '<li%s><a href="%s">%s</a></li>' % \
                   (current and ' class="current"' or '',
-                   target.replace('index.html',''),
+                   url(target),
                    name)
     #>
     </ul>

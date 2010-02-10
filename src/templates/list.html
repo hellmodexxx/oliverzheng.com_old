@@ -17,17 +17,16 @@ for section, (section_title, section_desc) in thispage['sections'].iteritems():
 
     print '<dl>'
 
+    from util import url
     for page in thispage['pages']:
         if page['section'] == section:
             # Hack, cause r2w doesn't expose the build attribute
-            if page['target'] == 'None':
+            link = url(page['target'])
+            if link is None:
                 print '<dt>%s</dt>' % page['link-title']
             else:
                 print '<dt><a href="%s">%s</a></dt>' % \
-                      (page['target'].\
-                           replace('http:/', 'http://').\
-                           replace('index.html',''),
-                       page['link-title'])
+                      (link, page['link-title'])
             print '<dd>%s</dd>' % page['page-description']
 
     print '</dl>'
