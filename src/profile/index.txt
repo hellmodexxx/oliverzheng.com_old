@@ -1,7 +1,7 @@
 restindex
     template: ../templates/submenu.html
     page-title: Profile
-    section-pages: , contact
+    section-pages: , contact, elsewhere
 /restindex
 
 Profile

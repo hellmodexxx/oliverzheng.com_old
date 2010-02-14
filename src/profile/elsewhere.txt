@@ -1,0 +1,16 @@
+restindex
+    page-title: Elsewhere
+/restindex
+
+Elsewhere
+=========
+
+Among the many locations I am on the intertubes, here are some I am willing to
+share publicly.
+
+- `Github (MTsoul) <http://github.com/MTsoul/>`_
+- `LinkedIn (Oliver Zheng) <http://ca.linkedin.com/in/oliverzheng/>`_
+- `Facebook (Oliver Zheng) <http://facebook.com/oliver.zheng/>`_
+- `Twitter (oliverzheng) <http://twitter.com/oliverzheng/>`_
+- `Last.fm (MTsoul) <http://last.fm/user/MTsoul/>`_
+- IRC freenode.net (MTsoul)
