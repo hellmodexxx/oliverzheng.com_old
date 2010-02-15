@@ -1,6 +1,13 @@
 restindex
+    template: ../templates/rambling.html
     page-title: Rambling
+
+    section-pages: , analytics
+
 /restindex
 
 Rambling
 ========
+
+Here's a collection of thoughts for my personal archival purposes. If it so
+happens that they are useful to others, then so be it.

@@ -1,0 +1,40 @@
+restindex
+    template: ../templates/basic.html
+
+    page-title: Embedding Google Analytics on Every Page
+/restindex
+uservalues
+    year: 2010
+    month: 2
+    day: 14
+/uservalues
+
+Embedding Google Analytics on Every Page
+========================================
+
+I wanted to embed Google Analytics on every page of this site, including all
+possible error pages. This site is pretty heterogenous, in that not all pages
+are managed by the same content generator. So if I were to use some
+template-based footer that included this, I'd have to duplicate in various
+places and keep track of duplications manually.
+
+Alternatively, I could use `.htaccess` to setup each page so it is parsed as
+PHP, which automatically appends the code snippet. But, seriously? PHP?
+
+So it turns out Apache has a built-in module called `mod_substitute`_, which is
+basically `sed`. I have the following defined for my virtual host::
+
+    <VirtualHost *:80>
+        ...
+        <Location />
+            AddOutputFilterByType SUBSTITUTE text/html text/plain
+            Substitute "s|</body>|<script type='text/javascript'>var gaJsHost = (('https:' == document.location.protocol) ? 'https://ssl.': 'http://www.');document.write(unescape('%3Cscript src=\'' + gaJsHost + 'google-analytics.com/ga.js\' type=\'text/javascript\'%3E%3C/script%3E'));</script><script type='text/javascript'>try {var pageTracker = _gat._getTracker('UA-12849586-1');pageTracker._setDomainName('.oliverzheng.com');pageTracker._trackPageview();} catch(err) {}</script></body>|i"
+        </Location>
+    </VirtualHost>
+
+With that, each page is `sed`'ed on the fly just before it is given to the
+client browser. My code snippet is inserted right before `</body>`. Yes, all
+that has to be on one line (it's `sed`) and, yes, that quote escaping is ugly,
+but it works simply and quickly.
+
+.. _mod_substitute: http://httpd.apache.org/docs/2.2/mod/mod_substitute.html
