@@ -1,0 +1,56 @@
+restindex
+    template: ../templates/basic.html
+
+    page-title: Syncing Google Calendar and Remind
+/restindex
+uservalues
+    year: 2010
+    month: 3
+    day: 3
+/uservalues
+
+Syncing Google Calendar and Remind
+==================================
+
+`Remind`_ is kind of awesome. Here is a less awesome way to sync it with Google
+Calendar. I use this primarily to sync between my Android phone and the
+reminders on my local computer.
+
+Remind to Google Calendar
+-------------------------
+
+1.  Have a publicly accessible server.
+2.  Use the `rem2ics`_ script to generate an ``.ics`` file periodically in
+    a cron job.
+3.  Automatically upload the generated ics file to the server. I do this via
+    ``scpy`` and authorized public keys.
+4.  Subscribe to this publicly accessible ``.ics`` file from Google Calendar.
+
+Google Calendar to Remind
+-------------------------
+
+1.  Make a calendar in Google Calendar. This is where you'll add your events to
+    from your mobile phone. Make this calendar the default calendar.
+2.  Use this `prune_gcal.py`_, which grabs all the events in the default
+    calendar in your Google account, deletes them, and outputs them in the
+    reminders format.
+3.  Setup a configuration file in ``~/.prune_gcal``, where the first line is
+    the Google account username, and the second line is the password. E.g.::
+
+        myemail@gmail.com
+        mypassword
+4.  Add this to a cron job::
+
+        prune_gcal.py >> ~/.reminders 2>/dev/null
+
+And that should let you use Remind as you normally would on your PC, and Google
+Calendar on your phone.
+
+The only caveat here is that your schedule would be publicly accessible
+somewhere, but you can either have it under an HTTPS URL (note that Google
+requires you to have a valid certificate; a self-generated certificate would not
+work), and/or have an obscure URL.
+
+.. _Remind: http://www.roaringpenguin.com/products/remind
+.. _rem2ics: http://wiki.43folders.com/index.php/Rem2ics
+.. _prune_gcal.py: ../files/scripts/prune_gcal.py
