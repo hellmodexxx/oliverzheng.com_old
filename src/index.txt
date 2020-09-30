@@ -6,4 +6,4 @@ restindex
     section-pages: , projects/index, rambling/index, hobbies/index, profile/index
 /restindex
 
-Some things change and some things don't.
+Some things change and some things don't but time don't wait for anyone so move on
